@@ -1,0 +1,29 @@
+body {
+  background-color: #1E0C0C;
+  color: #FFFFFF;
+  font-family: 'Inter', Courier, monospace;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./assets/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-btn {
+  align-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  /* background-color: orange; */
+  color: white;
+  outline: none;
+}
