@@ -30,7 +30,9 @@ Link to Figma: https://www.figma.com/file/SGVJjr37o9zlesoL5iG64U/Untitled?type=d
 
 
 
-navbar is fucking up
-fix form
+navbar is fucking up - fixed! 
+fix form - done!
 wtf is happening with the carousel, man????
 adjust hero image, if time permits
+level out h1 and navbar
+create button function

@@ -8,30 +8,31 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ContactMe from './components/ContactMe';
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
+    <>
+    {/* <BrowserRouter> */}
     <div className="App"> 
-    {/* <Row>
-      <Col> */
-      <h1>LIZ GARCIA - WEB DEVELOPER</h1>  
-      /*</Col>
+    <Row>
+      <Col>
+      <h1 className='d-flex align-content-end'>LIZ GARCIA - WEB DEVELOPER</h1>  
+      </Col>
       <Col>
       <Navbar />
       </Col>
       </Row> 
-      <LandingPage /> */}
-      <Navbar />
+      <LandingPage />
     </div> 
-    <Routes>
+    {/* <Routes>
       <Route path="/" element={<LandingPage />} />  
       <Route path='/tech' element={<LandingPage />} />
       <Route path='/work' element={<LandingPage />} />
       <Route path='/ContactMe' element={<ContactMe />} />
       <Route path='/ContactMe' element={<ContactMe />} />  
     </Routes>   
-    </BrowserRouter>
+    </BrowserRouter> */}
+    </>
   )
 }
 

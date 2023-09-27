@@ -1,16 +1,20 @@
 import React from "react";
 import { Button, Container, Form, Row, Col, Carousel, Image } from "react-bootstrap";
 import heroImageURL from "../assets/heroImage.jpg";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
 
+  const handleClick = () => {
+    navigate("/ContactMe");
+  }
 
 
   return (
     <Container>
       <div className="hero-image d-flex justify-content-center">
         <img src={heroImageURL} alt="black and white image of person typing" />
-        <Button
+        <Button onClick={handleClick}
           className="hero-btn"
           style={{ background: "orange", color: "white", padding: 10 }}
         >
@@ -27,7 +31,7 @@ const LandingPage = () => {
         </p>
         {/* links to linkedin and resume here */}
       </div>
-      <div className="tech" href="tech">
+      <div className="tech" id="tech">
         <h2>TECHNOLOGIES</h2>
         <p>
           I have experience in C#, HTML, CSS, JavaScript, Typescript, React,
@@ -97,26 +101,26 @@ const LandingPage = () => {
             <Col md={6}>
               <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Name:</Form.Label>
-                <Form.Control style={{width: 635}} type="text" />
+                <Form.Control style={{maxWidth: 635}} type="text" />
               </Form.Group>
             </Col>
             <Col md={6}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email:</Form.Label>
-                <Form.Control style={{width: 635}} type="email" />
+                <Form.Control style={{maxWidth: 635}} type="email" />
               </Form.Group>
             </Col>
           </Row>
 
           <Form.Group className="mb-3" controlId="subject">
             <Form.Label>Subject:</Form.Label>
-            <Form.Control style={{width: 1300}} type="text" />
+            <Form.Control style={{maxWidth: 1300}} type="text" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="message">
             <Form.Label>Message:</Form.Label>
-            <Form.Control style={{width: 1300, height: 200}} type="text" />
+            <Form.Control style={{maxWidth: 1300, height: 200}} type="text" />
           </Form.Group>
-          <Button className="d-flex justify-content-center"
+          <Button className="form-btn d-flex justify-content-center"
             style={{ backgroundColor: "#2296C8", color: "white", padding: 5, width: 125 }}
             type="submit"
           >
