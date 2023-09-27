@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { Row, Col } from "react-bootstrap";
 import Navbar from './components/Navbar';
@@ -13,9 +14,9 @@ function App() {
     <BrowserRouter>
     <div className="App"> 
     {/* <Row>
-      <Col>
+      <Col> */
       <h1>LIZ GARCIA - WEB DEVELOPER</h1>  
-      </Col>
+      /*</Col>
       <Col>
       <Navbar />
       </Col>
