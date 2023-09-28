@@ -1,12 +1,15 @@
 import React from "react";
 import { Button, Container, Form, Row, Col, Carousel, Image } from "react-bootstrap";
 import heroImageURL from "../assets/heroImage.jpg";
+import document_iconURL from "../assets/document_icon.png";
+import github_iconURL from "../assets/github_icon.png";
+import linkedin_icon2URL from "../assets/linkedin_icon2.png";
 import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
 
   const handleClick = () => {
-    navigate("/ContactMe");
+    useNavigate("/ContactMe");
   }
 
 
@@ -29,7 +32,11 @@ const LandingPage = () => {
           maintaining an aquarium; in these activities attention to detail is
           crucial. Let me help you with details!
         </p>
-        {/* links to linkedin and resume here */}
+        <img className="mx-2" style={{width: 20, height: 20}} src={linkedin_icon2URL} alt="" />
+        <a href="https://www.linkedin.com/in/elizabeth-liz-garcia-31231b95">My LinkedIn</a>
+        <br />
+        <img className="mx-2" style={{width: 20, height: 20}} src={document_iconURL} alt="" />
+        <a href="https://drive.google.com/file/d/16oOFUReO31mfnUuFJTDbiz6OiKD8zChl/view">My Resume</a>
       </div>
       <div className="tech" id="tech">
         <h2>TECHNOLOGIES</h2>
@@ -87,10 +94,13 @@ const LandingPage = () => {
           </Carousel.Item>
 
         </Carousel>
+        <Row>
+
+        </Row>
         <p>
-          Check out my GitHub here: Check out my GitHub here:
-          https://github.com/caliz83
-          {/* add github icon */}
+          Check out my GitHub here: 
+          <a href="https://github.com/caliz83"> https://github.com/caliz83</a>
+        <img className="mx-2" style={{width: 20, height: 20}} src={github_iconURL} alt="" />
         </p>
       </div>
       <div className="contact" id="contact">

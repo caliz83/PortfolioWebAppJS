@@ -32,7 +32,10 @@ Link to Figma: https://www.figma.com/file/SGVJjr37o9zlesoL5iG64U/Untitled?type=d
 
 navbar is fucking up - fixed! 
 fix form - done!
+level out h1 and navbar - yay!
+add linkedin, github, and resume icons - boom!
+
 wtf is happening with the carousel, man????
+create button function - hmm, not working as expected, keep working on...
+contact page flaming out
 adjust hero image, if time permits
-level out h1 and navbar
-create button function

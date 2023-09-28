@@ -28,7 +28,7 @@ const ContactMe = () => {
             <Form.Label>Message:</Form.Label>
             <Form.Control style={{width: 635, height: 200}} type="text" placeholder="Message" />
           </Form.Group>
-          <Button className="d-flex justify-content-center"
+          <Button className="hero-btn d-flex justify-content-center"
             style={{ backgroundColor: "#2296C8", color: "white", padding: 5, width: 125 }}
             type="submit"
           >
