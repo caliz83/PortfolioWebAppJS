@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
 import { Row, Col } from "react-bootstrap";
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ContactMe from './components/ContactMe';
+import './App.css';
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -16,13 +16,14 @@ function App() {
     <div className="App"> 
     <Row>
       <Col>
-      <h1 className='d-flex align-content-end'>LIZ GARCIA - WEB DEVELOPER</h1>  
+      
       </Col>
       <Col>
       <Navbar />
       </Col>
       </Row> 
-      <LandingPage />
+      {/* <LandingPage /> */}
+      <ContactMe />
     </div> 
     {/* <Routes>
       <Route path="/" element={<LandingPage />} />  

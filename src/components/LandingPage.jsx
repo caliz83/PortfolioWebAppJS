@@ -4,17 +4,27 @@ import heroImageURL from "../assets/heroImage.jpg";
 import document_iconURL from "../assets/document_icon.png";
 import github_iconURL from "../assets/github_icon.png";
 import linkedin_icon2URL from "../assets/linkedin_icon2.png";
+import tictactoe from "../assets/tictactoe.png";
+import weather from "../assets/weatherapp.jpg";
+import hangman from "../assets/hangman.png";
+import flashcards from "../assets/flashcards.png";
+import trivia from "../assets/trivia.jpg";
+import reminderapp from "../assets/reminderapp.png";
 import { useNavigate } from "react-router-dom";
+import '../App.css';
+
 
 const LandingPage = () => {
 
   const handleClick = () => {
-    useNavigate("/ContactMe");
+    console.log("Button clicked!");
+    useNavigate('/ContactMe');
   }
 
 
   return (
     <Container>
+      <h1 className='d-flex align-content-end'>LIZ GARCIA - WEB DEVELOPER</h1>  
       <div className="hero-image d-flex justify-content-center">
         <img src={heroImageURL} alt="black and white image of person typing" />
         <Button onClick={handleClick}
@@ -52,42 +62,42 @@ const LandingPage = () => {
         <Carousel data-bs-theme="dark" slide={false}>
 
           <Carousel.Item>
-            <img className="d-block w-100" src="" alt=""/>
+            <img className="d-block w-100" src={tictactoe} alt=""/>
             <Carousel.Caption>
               <p>Tic Tac Toe game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <img className="d-block w-100" src="" alt=""/>
+          <img className="d-block w-100" src={weather} alt=""/>
             <Carousel.Caption>
               <p>Weather app</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <img className="d-block w-100" src="" alt=""/>
+          <img className="d-block w-100" src={hangman} alt=""/>
             <Carousel.Caption>
               <p>Hangman game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <img className="d-block w-100" src="" alt=""/>
+          <img className="d-block w-100" src={flashcards} alt=""/>
             <Carousel.Caption>
               <p>Flashcard Quiz app</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <Image className="d-block w-100" src="" alt=""/>
+          <Image className="d-block w-100" src={trivia} alt=""/>
             <Carousel.Caption>
               <p>Trivia game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <Image className="d-block w-100" src="" alt=""/>
+          <Image className="d-block w-100" src={reminderapp} alt=""/>
             <Carousel.Caption>
               <p>Reminder app</p>
             </Carousel.Caption>

@@ -1,0 +1,55 @@
+body {
+    background-color: #77B8B4;
+    color: #FFFFFF;
+  }
+  
+  * {
+    font-family: Inter, sans-serif;
+  }
+
+h1 {
+    font-weight: bold;
+    margin-top: 80px;
+  }
+
+.form-btn {
+    justify-content: center !important;
+    margin-left: 45%;
+  }
+  
+  .form-btn:hover {
+    box-shadow: 0 0 5px 2px;
+    --translate-y: -2px;
+  }
+  
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    src: url("Inter-bold.woff2") format("woff2"),
+      url("Inter-bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    src: url("Inter-medium.woff2") format("woff2"),
+      url("Inter-medium.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    src: url("Inter-regular.woff2") format("woff2"),
+      url("Inter-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    src: url("Inter-semibold.woff2") format("woff2"),
+      url("Inter-semibold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }

@@ -34,8 +34,8 @@ navbar is fucking up - fixed!
 fix form - done!
 level out h1 and navbar - yay!
 add linkedin, github, and resume icons - boom!
+wtf is happening with the carousel, man???? - resolved (sort of, images are just placeholders so not super worried about the resolution... yet)
 
-wtf is happening with the carousel, man????
 create button function - hmm, not working as expected, keep working on...
 contact page flaming out
 adjust hero image, if time permits

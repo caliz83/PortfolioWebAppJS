@@ -1,9 +1,11 @@
 import React from 'react'
+import { Form, Row, Col, Button } from 'react-bootstrap';
+import '../Contact.css';
 
 const ContactMe = () => {
   return (
     <div>
-        <h1></h1>
+        <h1>Let make something beautiful together!</h1>
         <Form>
           <Row>
             <Col md={6}>

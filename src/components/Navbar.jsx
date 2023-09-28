@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
 import { Nav } from 'react-bootstrap';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
-import '../App.css'
+import LandingPage from './LandingPage';
+import ContactMe from './ContactMe';
+//import '../App.css'
 
 const Navbar = () => {
     //About
@@ -18,7 +20,7 @@ const Navbar = () => {
     <BrowserRouter>
     <div
         className='nav d-flex align-content-start justify-content-end m-5'
-      activeKey="/home"
+      activekey="/home"
       onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
     >
       <h2>
@@ -34,6 +36,17 @@ const Navbar = () => {
         <Link className='nav' to='#contact'>Contact Me</Link>
       </h2>
     </div>    
+
+    <Routes>
+      <Route path="/" element={<LandingPage />} />  
+      <Route path='/tech' element={<LandingPage />} />
+      <Route path='/work' element={<LandingPage />} />
+      <Route path='/contact' element={<LandingPage />} />
+      <Route path='/ContactMe' element={<ContactMe />} />
+      
+       
+    </Routes>   
+    
     </BrowserRouter>
   )
 }
