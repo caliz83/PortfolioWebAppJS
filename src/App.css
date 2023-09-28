@@ -1,5 +1,5 @@
 body {
-  background-color: #1E0C0C I !important;
+  background-color: #1E0C0C !important;
   color: #FFFFFF;
 }
 
@@ -14,6 +14,8 @@ html {
 h1 {
   font-weight: bold;
   margin-top: 80px;
+  white-space: nowrap;
+  justify-content: start;
 }
 
 h2 {
@@ -27,7 +29,11 @@ h2 {
   text-decoration: none !important;
   color: #FFFFFF !important;
   font-family: Inter, sans-serif;
-  padding: 0 20px 0 10px;
+  padding: 0 0 5px 5px;
+  /* padding-right: 5px; */
+  /* text-align: right; */
+  /* flex-shrink: 100; */
+  justify-content: end !important;
 }
 
 .hero-image {
@@ -61,6 +67,10 @@ h2 {
   --translate-y: -2px;
 }
 
+.beautiful {
+  font-size: xx-large;
+}
+
 .form-btn {
   justify-content: center !important;
   margin-left: 45%;
@@ -69,6 +79,11 @@ h2 {
 .form-btn:hover {
   box-shadow: 0 0 5px 2px;
   --translate-y: -2px;
+}
+
+.blagh {
+  background-color: #77B8B4;
+  color: #FFFFFF;
 }
 
 @font-face {

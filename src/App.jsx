@@ -23,7 +23,7 @@ function App() {
       </Col>
       </Row> 
       {/* <LandingPage /> */}
-      <ContactMe />
+      {/* <ContactMe /> */}
     </div> 
     {/* <Routes>
       <Route path="/" element={<LandingPage />} />  

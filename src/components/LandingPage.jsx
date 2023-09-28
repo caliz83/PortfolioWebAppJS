@@ -16,15 +16,16 @@ import '../App.css';
 
 const LandingPage = () => {
 
+  let navigate = useNavigate();
+
   const handleClick = () => {
     console.log("Button clicked!");
-    useNavigate('/ContactMe');
+    navigate('/ContactMe');
   }
 
 
   return (
-    <Container>
-      <h1 className='d-flex align-content-end'>LIZ GARCIA - WEB DEVELOPER</h1>  
+    <Container> 
       <div className="hero-image d-flex justify-content-center">
         <img src={heroImageURL} alt="black and white image of person typing" />
         <Button onClick={handleClick}

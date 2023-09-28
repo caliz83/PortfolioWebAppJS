@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
-import { Nav } from 'react-bootstrap';
+import { Col, Nav, Row } from 'react-bootstrap';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import LandingPage from './LandingPage';
 import ContactMe from './ContactMe';
-//import '../App.css'
+import '../App.css'
 
 const Navbar = () => {
     //About
@@ -12,14 +12,18 @@ const Navbar = () => {
     //Work
     //Contact Me
 
-    const aboutSection = useRef(null);
+    //const aboutSection = useRef(null);
 
     const scrollTo = () => {window.scrollTo({top: aboutSection.current.offsetTop, behavior: 'smooth'})};
 
   return (
     <BrowserRouter>
-    <div
-        className='nav d-flex align-content-start justify-content-end m-5'
+    <Row className='d-flex justify-content-evenly'>
+      <Col>
+      <h1 className=''>LIZ GARCIA - WEB DEVELOPER</h1> 
+      </Col>
+    <Col
+        className='nav d-flex align-content-start m-5'
       activekey="/home"
       onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
     >
@@ -35,7 +39,8 @@ const Navbar = () => {
       <h2>
         <Link className='nav' to='#contact'>Contact Me</Link>
       </h2>
-    </div>    
+    </Col>          
+    </Row>
 
     <Routes>
       <Route path="/" element={<LandingPage />} />  
