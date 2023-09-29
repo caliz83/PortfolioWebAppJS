@@ -14,14 +14,9 @@ function App() {
     <>
     {/* <BrowserRouter> */}
     <div className="App"> 
-    <Row>
-      <Col>
-      
-      </Col>
-      <Col>
+  
       <Navbar />
-      </Col>
-      </Row> 
+      
       {/* <LandingPage /> */}
       {/* <ContactMe /> */}
     </div> 

@@ -12,22 +12,31 @@ import trivia from "../assets/trivia.jpg";
 import reminderapp from "../assets/reminderapp.png";
 import { useNavigate } from "react-router-dom";
 import '../App.css';
+import setBodyColor from './BgColor';
 
 
 const LandingPage = () => {
+
+  setBodyColor({color: "#1E0C0C"})
+
+  // const [color, setColor] = useState('#1E0C0C') //#77B8B4
+  // const click = color => {
+  //   setColor(color);
+  // }
 
   let navigate = useNavigate();
 
   const handleClick = () => {
     console.log("Button clicked!");
     navigate('/ContactMe');
+    // setColor('#77B8B4');
   }
 
 
   return (
-    <Container> 
-      <div className="hero-image d-flex justify-content-center">
-        <img src={heroImageURL} alt="black and white image of person typing" />
+    <Container fluid> 
+      <div className="hero-image d-flex justify-content-center" style={{width: '100vw', height: 'auto'}}>
+        <img className="hero-image-img" src={heroImageURL} alt="black and white image of person typing" />
         <Button onClick={handleClick}
           className="hero-btn"
           style={{ background: "orange", color: "white", padding: 10 }}
@@ -117,29 +126,31 @@ const LandingPage = () => {
       <div className="contact" id="contact">
         <h2>CONTACT ME!</h2>
         <p>Let's discuss what I can create for you!</p>
+        <div>
         <Form>
+          <Container fluid>
           <Row>
             <Col md={6}>
               <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Name:</Form.Label>
-                <Form.Control style={{maxWidth: 635}} type="text" />
+                <Form.Control style={{maxWidth: 685}} type="text" />
               </Form.Group>
             </Col>
             <Col md={6}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email:</Form.Label>
-                <Form.Control style={{maxWidth: 635}} type="email" />
+                <Form.Control style={{maxWidth: 685}} type="email" />
               </Form.Group>
             </Col>
           </Row>
 
           <Form.Group className="mb-3" controlId="subject">
             <Form.Label>Subject:</Form.Label>
-            <Form.Control style={{maxWidth: 1300}} type="text" />
+            <Form.Control style={{maxWidth: 1530}} type="text" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="message">
             <Form.Label>Message:</Form.Label>
-            <Form.Control style={{maxWidth: 1300, height: 200}} type="text" />
+            <Form.Control style={{maxWidth: 1530, height: 200}} type="text" />
           </Form.Group>
           <Button className="form-btn d-flex justify-content-center"
             style={{ backgroundColor: "#2296C8", color: "white", padding: 5, width: 125 }}
@@ -147,7 +158,10 @@ const LandingPage = () => {
           >
             Submit
           </Button>
+          </Container>
         </Form>
+
+        </div>
       </div>
     </Container>
   );
