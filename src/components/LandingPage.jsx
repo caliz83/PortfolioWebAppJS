@@ -69,45 +69,45 @@ const LandingPage = () => {
         <h2>WORK</h2>
         <p>Some of my past projects include: </p>
         {/* carousel of struggles */}
-        <Carousel data-bs-theme="dark" slide={false}>
+        <Carousel data-bs-theme="dark" slide={false} className="d-flex justify-content-lg-aroundcarousel">
 
           <Carousel.Item>
-            <img className="d-block w-100" src={tictactoe} alt=""/>
+            <a href="https://wonderful-river-05519dd1e.4.azurestaticapps.net/"><img className="d-block w-100" src={tictactoe} alt=""/></a>
             <Carousel.Caption>
               <p>Tic Tac Toe game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <img className="d-block w-100" src={weather} alt=""/>
+          <a href=""><img className="d-block w-100" src={weather} alt=""/></a>
             <Carousel.Caption>
               <p>Weather app</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <img className="d-block w-100" src={hangman} alt=""/>
+          <a href="https://victorious-bush-098a6d91e.4.azurestaticapps.net/"><img className="d-block w-100" src={hangman} alt=""/></a>
             <Carousel.Caption>
               <p>Hangman game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <img className="d-block w-100" src={flashcards} alt=""/>
+          <a href="https://witty-forest-0eb30fb1e.4.azurestaticapps.net/"><img className="d-block w-100" src={flashcards} alt=""/></a>
             <Carousel.Caption>
               <p>Flashcard Quiz app</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <Image className="d-block w-100" src={trivia} alt=""/>
+          <a href=""><Image className="d-block w-100" src={trivia} alt=""/></a>
             <Carousel.Caption>
               <p>Trivia game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <Image className="d-block w-100" src={reminderapp} alt=""/>
+          <a href="https://witty-bay-0d2108f1e.4.azurestaticapps.net/"><Image className="d-block w-100" src={reminderapp} alt=""/></a>
             <Carousel.Caption>
               <p>Reminder app</p>
             </Carousel.Caption>
