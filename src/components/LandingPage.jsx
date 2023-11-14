@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Form, Row, Col, Carousel, Image } from "react-bootstrap";
+import { Button, Container, Form, Row, Col, Carousel } from "react-bootstrap";
 import heroImageURL from "../assets/heroImage.jpg";
 import document_iconURL from "../assets/document_icon.png";
 import github_iconURL from "../assets/github_icon.png";
@@ -31,6 +31,23 @@ const LandingPage = () => {
     navigate('/ContactMe');
     // setColor('#77B8B4');
   }
+
+  let items = document.querySelectorAll('.carousel .carousel-item')
+
+items.forEach((el) => {
+    // number of slides per carousel-item
+    const minPerSlide = 4
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+        if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+})
 
 
   return (
@@ -69,45 +86,45 @@ const LandingPage = () => {
         <h2>WORK</h2>
         <p>Some of my past projects include: </p>
         {/* carousel of struggles */}
-        <Carousel data-bs-theme="dark" slide={false} className="d-flex justify-content-lg-aroundcarousel">
+        <Carousel data-bs-theme="dark" slide={false} className="d-flex justify-content-lg-center carousel">
 
           <Carousel.Item>
-            <a href="https://wonderful-river-05519dd1e.4.azurestaticapps.net/"><img className="d-block w-100" src={tictactoe} alt=""/></a>
+            <a href="https://wonderful-river-05519dd1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={tictactoe} alt=""/></a>
             <Carousel.Caption>
               <p>Tic Tac Toe game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href=""><img className="d-block w-100" src={weather} alt=""/></a>
+          <a href=""><img className="d-block w-100 carousel-item" src={weather} alt=""/></a>
             <Carousel.Caption>
               <p>Weather app</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href="https://victorious-bush-098a6d91e.4.azurestaticapps.net/"><img className="d-block w-100" src={hangman} alt=""/></a>
+          <a href="https://victorious-bush-098a6d91e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={hangman} alt=""/></a>
             <Carousel.Caption>
               <p>Hangman game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href="https://witty-forest-0eb30fb1e.4.azurestaticapps.net/"><img className="d-block w-100" src={flashcards} alt=""/></a>
+          <a href="https://witty-forest-0eb30fb1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={flashcards} alt=""/></a>
             <Carousel.Caption>
               <p>Flashcard Quiz app</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href=""><Image className="d-block w-100" src={trivia} alt=""/></a>
+          <a href=""><img className="d-block w-100 carousel-item" src={trivia} alt=""/></a>
             <Carousel.Caption>
               <p>Trivia game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href="https://witty-bay-0d2108f1e.4.azurestaticapps.net/"><Image className="d-block w-100" src={reminderapp} alt=""/></a>
+          <a href="https://witty-bay-0d2108f1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={reminderapp} alt=""/></a>
             <Carousel.Caption>
               <p>Reminder app</p>
             </Carousel.Caption>
