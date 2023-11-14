@@ -86,7 +86,8 @@ items.forEach((el) => {
         <h2>WORK</h2>
         <p>Some of my past projects include: </p>
         {/* carousel of struggles */}
-        <Carousel data-bs-theme="dark" slide={false} className="d-flex justify-content-lg-center carousel">
+        <div style={{ width: '75vw'}}>
+        <Carousel data-bs-theme="dark" slide={false} className="d-flex justify-content-lg-center carousel" cols={4} rows={1} gap={4} autoPlay={1000} loop>
 
           <Carousel.Item>
             <a href="https://wonderful-river-05519dd1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={tictactoe} alt=""/></a>
@@ -131,6 +132,7 @@ items.forEach((el) => {
           </Carousel.Item>
 
         </Carousel>
+        </div>
         <Row>
 
         </Row>

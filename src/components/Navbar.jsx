@@ -12,9 +12,9 @@ const Navbar = () => {
     //Work
     //Contact Me
 
-    const aboutSection = useRef(null);
+    //const aboutSection = useRef(null);
 
-    const scrollDown = (id) => {window.scrollTo({top: id.current.offsetTop, behavior: 'smooth'})};
+    const scrollTo = () => {window.scrollTo({top: aboutSection.current.offsetTop, behavior: 'smooth'})};
 
   return (
     <BrowserRouter>
@@ -28,17 +28,17 @@ const Navbar = () => {
       onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
     >
       <h2>
-        <Link className='nav' to='#about' onClick={scrollDown(about)}>About</Link>
+        <Link className='nav' to='#about'>About</Link>
       </h2>
       <h2>
-        <Link className='nav' to='#tech' onClick={scrollDown(tech)}>Technologies</Link>
+        <Link className='nav' to='#tech'>Technologies</Link>
       </h2>
       <h2>
-        <Link className='nav' to='#work' onClick={scrollDown(work)}>Work</Link>
+        <Link className='nav' to='#work'>Work</Link>
       </h2>
-      {/* <h2>
-        <Link className='nav' to='#contact' onClick={scrollDown(contact)}>Contact Me</Link>
-      </h2> */}
+      <h2>
+        <Link className='nav' to='#contact'>Contact Me</Link>
+      </h2>
     </Col>          
     </Row>
 
