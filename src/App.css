@@ -92,13 +92,19 @@ h2 {
 }
 
 .carousel {
-  width: 800px;
+  /* width: 800px; */
   justify-content: center;
 }
 
 .carousel-item {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
+}
+
+.carousel-text {
+  color:brown;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* #Form {

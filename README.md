@@ -30,11 +30,21 @@ Link to Figma: https://www.figma.com/file/SGVJjr37o9zlesoL5iG64U/Untitled?type=d
 
 
 
-navbar is fucking up - fixed! 
-add linkedin, github, and resume icons - boom!
-wtf is happening with the carousel, man???? - resolved (sort of, images are just placeholders so not super worried about the resolution... yet)
-create button function - finally!
-contact page flaming out - omg ty!! it's fixed
-fix form - I think it's good now...
-level out h1 and navbar - okay!
-adjust hero image, if time permits - mostly fixed
+hid navbar on contactme page - 
+
+Link other projects in Azure process:
+copy file link from GitHub
+open new window in VS Code, click on gear icon in bottom left (Manage) and choose Command Palette
+type Git Clone
+paste in file link from GitHub, hit Enter
+do not select a folder, just click Select as Repository Destination
+cd into file, if necessary (if you have to cd, might be a problem...)
+npm i
+npm run dev
+click on Azure extension on left side
+make sure you're signed in, click the plus to add a resource
+choose create static web app
+hit enter for the default name, choose us west 2, choose react, hit enter when you see the forward slash, erase build and type '/dist', hit enter
+click Open Actions in GitHub (using dist because we used vite to create files, otherwise, use the default 'build')
+
+Once successfully built/deployed, click on Visual Studio Enterprise Subscription so it expands, then click on Static Web Apps - right click on the name of the item you just deployed and choose Browse Site. It will open in web page; use the link for that site.
