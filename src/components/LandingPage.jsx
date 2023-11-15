@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Container, Form, Row, Col, Carousel } from "react-bootstrap";
-// import Carousel from "react-grid-carousel";
 import heroImageURL from "../assets/heroImage.jpg";
 import document_iconURL from "../assets/document_icon.png";
 import github_iconURL from "../assets/github_icon.png";
@@ -11,7 +10,7 @@ import hangman from "../assets/hangman.png";
 import flashcards from "../assets/flashcards.png";
 import trivia from "../assets/trivia.jpg";
 import reminderapp from "../assets/reminderapp.png";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import '../App.css';
 import setBodyColor from './BgColor';
 
@@ -20,36 +19,11 @@ const LandingPage = () => {
 
   setBodyColor({color: "#1E0C0C"})
 
-  // const [color, setColor] = useState('#1E0C0C') //#77B8B4
-  // const click = color => {
-  //   setColor(color);
-  // }
-
-  let navigate = useNavigate();
-
   const handleClick = () => {
     console.log("Button clicked!");
-    navigate('/ContactMe');
-    // setColor('#77B8B4');
+    const scrollTo = document.getElementById("contact");
+    scrollTo.scrollIntoView();
   }
-
-  //let items = document.querySelectorAll('.carousel .carousel-item')
-
-// items.forEach((el) => {
-//     // number of slides per carousel-item
-//     const minPerSlide = 4
-//     let next = el.nextElementSibling
-//     for (var i=1; i<minPerSlide; i++) {
-//         if (!next) {
-//             // wrap carousel by using first child
-//             next = items[0]
-//         }
-//         let cloneChild = next.cloneNode(true)
-//         el.appendChild(cloneChild.children[0])
-//         next = next.nextElementSibling
-//     }
-// })
-
 
   return (
     <Container fluid> 
@@ -91,42 +65,42 @@ const LandingPage = () => {
         <Carousel data-bs-theme="dark" slide={false} autoPlay={1000} loop>
 
           <Carousel.Item>
-            <a href="https://wonderful-river-05519dd1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={tictactoe} alt=""/></a>
+            <a href="https://wonderful-river-05519dd1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={tictactoe} alt="Tic Tac Toe"/></a>
             <Carousel.Caption>
               <p className="carousel-text">Tic Tac Toe game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href=""><img className="d-block w-100 carousel-item" src={weather} alt=""/></a>
+          <a href="https://icy-stone-00446451e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={weather} alt="Weather"/></a>
             <Carousel.Caption>
               <p className="carousel-text">Weather app</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href="https://victorious-bush-098a6d91e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={hangman} alt=""/></a>
+          <a href="https://victorious-bush-098a6d91e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={hangman} alt="Hangman"/></a>
             <Carousel.Caption>
               <p className="carousel-text">Hangman game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href="https://witty-forest-0eb30fb1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={flashcards} alt=""/></a>
+          <a href="https://witty-forest-0eb30fb1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={flashcards} alt="Flashcards"/></a>
             <Carousel.Caption>
               <p className="carousel-text">Flashcard Quiz app</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href=""><img className="d-block w-100 carousel-item" src={trivia} alt=""/></a>
+          <a href="https://wonderful-field-04a14c11e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={trivia} alt="Trivia game"/></a>
             <Carousel.Caption>
               <p className="carousel-text">Trivia game</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href="https://witty-bay-0d2108f1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={reminderapp} alt=""/></a>
+          <a href="https://witty-bay-0d2108f1e.4.azurestaticapps.net/"><img className="d-block w-100 carousel-item" src={reminderapp} alt="Reminder checklist"/></a>
             <Carousel.Caption>
               <p className="carousel-text">Reminder app</p>
             </Carousel.Caption>
@@ -147,7 +121,7 @@ const LandingPage = () => {
         <h2>CONTACT ME!</h2>
         <p>Let's discuss what I can create for you!</p>
         <div>
-        <Form>
+        <Form className="form">
           <Container fluid>
           <Row>
             <Col md={6}>
