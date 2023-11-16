@@ -30,8 +30,6 @@ Link to Figma: https://www.figma.com/file/SGVJjr37o9zlesoL5iG64U/Untitled?type=d
 
 
 
-hid navbar on contactme page - 
-
 Link other projects in Azure process:
 copy file link from GitHub
 open new window in VS Code, click on gear icon in bottom left (Manage) and choose Command Palette
@@ -44,7 +42,7 @@ npm run dev
 click on Azure extension on left side
 make sure you're signed in, click the plus to add a resource
 choose create static web app
-hit enter for the default name, choose us west 2, choose react, hit enter when you see the forward slash, erase build and type '/dist', hit enter
+hit enter for the default name, choose us west 2, choose react (if html, choose html), hit enter when you see the forward slash, erase build and type '/dist' (if html type '/index.html'), hit enter
 click Open Actions in GitHub (using dist because we used vite to create files, otherwise, use the default 'build')
 
 Once successfully built/deployed, click on Visual Studio Enterprise Subscription so it expands, then click on Static Web Apps - right click on the name of the item you just deployed and choose Browse Site. It will open in web page; use the link for that site.
