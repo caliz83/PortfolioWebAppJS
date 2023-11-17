@@ -1,6 +1,14 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Container, Form, Row, Col, Carousel } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Form,
+  Row,
+  Col,
+  Carousel,
+  Modal,
+} from "react-bootstrap";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import heroImageURL from "../assets/heroImage.jpg";
@@ -13,7 +21,9 @@ import hangman from "../assets/hangman.png";
 import flashcards from "../assets/flashcards.png";
 import trivia from "../assets/trivia.jpg";
 import reminderapp from "../assets/reminderapp.png";
-// import { useNavigate } from "react-router-dom";
+import magiceightball from "../assets/magiceightball.jpg";
+import spinnerwheel from "../assets/spinnerwheel.jpg";
+import clock from "../assets/clock.png";
 import "../App.css";
 import setBodyColor from "./BgColor";
 
@@ -55,10 +65,7 @@ const LandingPage = () => {
       )
       .then(
         () => {
-          alert(
-            "I'm excited to hear from you; I will get back to you as soon as possible"
-          );
-          // change to a modal?? per Jose
+          setShow(true);
 
           setForm({
             name: "",
@@ -70,18 +77,24 @@ const LandingPage = () => {
         (error) => {
           setLoading(false);
           console.log(error, "Hey, we have an error; fix it!");
-
-          alert("Oh no! something went wrong; please try again!");
-          //also change to a modal, per Jose
+          setShowError(true);
         }
       );
   };
 
+  //for the form
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     setForm({ ...form, [name]: value });
   };
+
+  //close the modals
+  const handleClose = () => setShow(false);
+  //success modal
+  const [show, setShow] = useState(false);
+  //error modal
+  const [showError, setShowError] = useState(false);
 
   return (
     <Container fluid>
@@ -160,6 +173,19 @@ const LandingPage = () => {
             </Carousel.Item>
 
             <Carousel.Item>
+              <a href="https://play.unity.com/mg/other/webgl-builds-379257">
+                <img
+                  className="d-block w-100 carousel-item"
+                  src={clock}
+                  alt="Clock"
+                />
+              </a>
+              <Carousel.Caption>
+                <p className="carousel-text">Unity Clock</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
               <a href="https://icy-stone-00446451e.4.azurestaticapps.net/">
                 <img
                   className="d-block w-100 carousel-item"
@@ -199,6 +225,19 @@ const LandingPage = () => {
             </Carousel.Item>
 
             <Carousel.Item>
+              <a href="https://play.unity.com/mg/other/webgl-builds-379256">
+                <img
+                  className="d-block w-100 carousel-item"
+                  src={spinnerwheel}
+                  alt="Spinner Wheel"
+                />
+              </a>
+              <Carousel.Caption>
+                <p className="carousel-text">Restaurant Picker</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
               <a href="https://wonderful-field-04a14c11e.4.azurestaticapps.net/">
                 <img
                   className="d-block w-100 carousel-item"
@@ -223,6 +262,21 @@ const LandingPage = () => {
                 <p className="carousel-text">Reminder app</p>
               </Carousel.Caption>
             </Carousel.Item>
+
+            {/* unity item added at last minute; if time to find thubmnail image, can add it to website */}
+            <Carousel.Item>
+              <a href="https://play.unity.com/mg/other/webgl-builds-379233">
+                <img
+                  className="d-block w-100 carousel-item"
+                  src={magiceightball}
+                  alt="magic eightball"
+                />
+              </a>
+              <Carousel.Caption>
+                <p className="carousel-text">Magic Eightball game</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
           </Carousel>
         </div>
         <Row></Row>
@@ -269,7 +323,6 @@ const LandingPage = () => {
                   </Form.Group>
                 </Col>
               </Row>
-
               <Form.Group className="mb-3" controlId="Form.ControlInput3">
                 <Form.Label>Subject:</Form.Label>
                 <Form.Control
@@ -301,8 +354,62 @@ const LandingPage = () => {
                 }}
                 type="submit"
               >
-                { loading ? "Sending..." : "Send" }
+                {loading ? "Sending..." : "Send"}
               </Button>
+              {/* modal for success */}
+              <Modal
+                show={show}
+                onHide={handleClose}
+                style={{ display: "block", position: "initial" }}
+              >
+                <Modal.Dialog>
+                  <Modal.Header style={{ background: "#382b2b" }} closeButton>
+                    <Modal.Title
+                      style={{ background: "#382b2b", color: "white" }}
+                    >
+                      Awesome!! XD
+                    </Modal.Title>
+                  </Modal.Header>
+
+                  <Modal.Body style={{ background: "#382b2b", color: "white" }}>
+                    <p>
+                      I'm excited to hear from you; I'll get back to you as soon
+                      as possible.
+                    </p>
+                  </Modal.Body>
+
+                  <Modal.Footer style={{ background: "#382b2b" }}>
+                    <Button variant="primary">Close</Button>
+                  </Modal.Footer>
+                </Modal.Dialog>
+              </Modal>
+              {/* modal for error */}
+              <Modal
+                show={showError}
+                onHide={handleClose}
+                style={{ display: "block", position: "initial" }}
+              >
+                <Modal.Dialog>
+                  <Modal.Header style={{ background: "#382b2b" }} closeButton>
+                    <Modal.Title
+                      style={{ background: "#382b2b", color: "white" }}
+                    >
+                      Oops!
+                    </Modal.Title>
+                  </Modal.Header>
+
+                  <Modal.Body style={{ background: "#382b2b", color: "white" }}>
+                    <p>
+                      Sorry but it looks like something went wrong; please try
+                      again.
+                    </p>
+                  </Modal.Body>
+
+                  <Modal.Footer style={{ background: "#382b2b" }}>
+                    <Button variant="secondary">Close</Button>
+                  </Modal.Footer>
+                </Modal.Dialog>
+              </Modal>
             </Container>
           </Form>
         </div>
