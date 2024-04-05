@@ -118,7 +118,7 @@ const LandingPage = () => {
       <div className="about" id="about">
         <h2>ABOUT</h2>
         <p>
-          I'm a non-binary web developer who loves Mexican food, Rezz concerts,
+          I'm a web developer who loves Mexican food, Rezz concerts,
           and dog training. My hobbies include gardening, home repair, and
           maintaining an aquarium; in these activities attention to detail is
           crucial. Let me help you with details!
@@ -129,7 +129,7 @@ const LandingPage = () => {
           src={linkedin_icon2URL}
           alt=""
         />
-        <a href="https://www.linkedin.com/in/elizabeth-liz-garcia-31231b95">
+        <a href="https://www.linkedin.com/in/lizgarciawebdev/">
           My LinkedIn
         </a>
         <br />
@@ -139,9 +139,9 @@ const LandingPage = () => {
           src={document_iconURL}
           alt=""
         />
-        <a href="https://drive.google.com/file/d/16oOFUReO31mfnUuFJTDbiz6OiKD8zChl/view">
+        {/* <a href="https://drive.google.com/file/d/16oOFUReO31mfnUuFJTDbiz6OiKD8zChl/view">
           My Resume
-        </a>
+        </a> */}
       </div>
       <div className="tech" id="tech">
         <h2>TECHNOLOGIES</h2>
@@ -154,6 +154,7 @@ const LandingPage = () => {
         <h2>WORK</h2>
         <p>Some of my past projects include: </p>
         {/* carousel of struggles */}
+        {/* TODO: rework to a grid layout */}
         <div
           style={{ width: "75vw" }}
           className="d-flex justify-content-lg-center carousel"
