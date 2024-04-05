@@ -133,12 +133,12 @@ const LandingPage = () => {
           My LinkedIn
         </a>
         <br />
-        <img
+        {/* <img
           className="mx-2"
           style={{ width: 20, height: 20 }}
           src={document_iconURL}
           alt=""
-        />
+        /> */}
         {/* <a href="https://drive.google.com/file/d/16oOFUReO31mfnUuFJTDbiz6OiKD8zChl/view">
           My Resume
         </a> */}
